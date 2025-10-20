@@ -1,8 +1,11 @@
-A PowerShell script to read a VCF file and output its data to a CSV file or preview the data using PowerShell's GridView.
-It should work for VCF Format Version 1.x to 3.x, but I've only tested it against the Test.vcf file that has examples of VCF Version 3 data.
+Powershell code to process a VCF (contact) data file and convert its data for output.
+Examples (end of this file) show how to output to console, GridView or a CVS file, as required.
+VCF data comes in many formats - this code only caters for some formats / versions, NOT all.
+VCF format is documented at https://www.rfc-editor.org/rfc/rfc6350
+IMPORTANTLY: this code only extracts data for fields specified in the New-Card data structure.
+All other contact fields, are ignored.
 
-Original code from https://github.com/dmarkle/ConvertFrom-Vcf:- this repo has pending updates and apears to have ceased development.
-Code has been updated to cover more versions of VCF formats and more phone, email and address types.
-Also added comments in the code, because I'm old school and understand not everyone is a programmer.
-A little explanation can be very helpful when working with any programming language, especially PowerShell.
-
+Adding data extraction for other data fields, requires writting code to 
+ - add the field to the data structure.
+ - identify relevant lines for the field and its data (can be multi-line) in the VCF file.
+ - extracting the fields data and writting it to the data structure.
