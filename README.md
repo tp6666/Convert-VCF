@@ -1,5 +1,5 @@
 Powershell code to process a VCF (contact) data file and convert its data for output.
-Examples (end of this file) show how to output to console, GridView or a CVS file, as required.
+Examples (at end of this PS script file) show how to output to console, GridView or a CVS file, as required.
 VCF data comes in many formats - this code only caters for some formats / versions, NOT all.
 VCF format is documented at https://www.rfc-editor.org/rfc/rfc6350
 IMPORTANTLY: this code only extracts data for fields specified in the New-Card data structure.
